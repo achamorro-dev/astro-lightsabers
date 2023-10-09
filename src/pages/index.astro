@@ -1,0 +1,16 @@
+---
+import { HomeScene } from "../components/home-scene";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Astro Lightsabers">
+  <main>
+    <HomeScene client:load />
+  </main>
+</Layout>
+
+<style>
+  main {
+    height: 100%;
+  }
+</style>
