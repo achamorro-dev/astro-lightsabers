@@ -5,12 +5,12 @@ Command: npx gltfjsx@6.2.13 public/models/darth-vader.glb
 
 import { useGLTF } from '@react-three/drei'
 
-export function DarthVaderSaber(props) {
+export const DarthVaderSaber = () => {
   const { nodes, materials } = useGLTF('/models/darth-vader.glb')
   const initialPosition = [0, -120, 0]
 
   return (
-    <group {...props} dispose={null} position={initialPosition}>
+    <group dispose={null} position={initialPosition}>
       <mesh geometry={nodes.emitter.geometry} material={materials['Black plastic']} position={[-23.963, -1.158, -30.774]} rotation={[1.572, 0, 0]} />
       <mesh geometry={nodes.emitter_shroud.geometry} material={materials['Black plastic']} position={[-23.963, -1.158, -30.774]} rotation={[1.572, 0, 0]} />
       <mesh geometry={nodes.d_ring.geometry} material={materials.Steel} position={[13.618, 254.938, -21.699]} rotation={[3.109, 0, Math.PI / 2]} />

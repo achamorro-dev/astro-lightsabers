@@ -1,0 +1,66 @@
+<main class="home-overlay">
+  <header class="header">
+    <h1 class="title">astro lightsabers</h1>
+  </header>
+</main>
+
+<style scoped="false">
+  .home-overlay {
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .header {
+    background-color: var(--on-primary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: cover 2s ease-in-out both 1s;
+    z-index: 0;
+  }
+
+  .title {
+    animation: cover-title 3s ease-in both;
+  }
+
+  @keyframes cover {
+    30% {
+      height: 100%;
+    }
+
+    95% {
+      position: absolute;
+    }
+
+    100% {
+      position: relative;
+      height: 4rem;
+    }
+  }
+
+  @keyframes cover-title {
+    0% {
+      opacity: 0;
+      font-size: var(--font-size-xxl);
+    }
+
+    25% {
+      opacity: 1;
+      font-size: var(--font-size-xxl);
+    }
+
+    35% {
+      font-size: var(--font-size-xxl);
+    }
+
+    80% {
+      font-size: var(--font-size-lg);
+    }
+  }
+</style>
