@@ -6,6 +6,7 @@
 
 <style scoped="false">
   .home-overlay {
+    background: transparent;
     position: fixed;
     inset: 0;
     height: 100vh;
@@ -26,6 +27,8 @@
   }
 
   .title {
+    line-height: 3rem;
+    text-align: center;
     animation: cover-title 3s ease-in both;
   }
 
@@ -47,16 +50,16 @@
   @keyframes cover-title {
     0% {
       opacity: 0;
-      font-size: var(--font-size-xxl);
+      font-size: 4rem;
     }
 
     25% {
       opacity: 1;
-      font-size: var(--font-size-xxl);
+      font-size: 4rem;
     }
 
     35% {
-      font-size: var(--font-size-xxl);
+      font-size: 4rem;
     }
 
     80% {
